@@ -1,0 +1,183 @@
+/* 
+Attribution: The design of this website was heavily inspired by Scotch.io's HTML & CSS course
+https://scotch.io/courses/create-a-beautiful-htmlcss-website
+*/
+
+/* simple browser reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling our header */
+header {
+  background: #2e8b57;
+  color: #fff;
+  padding: 10px 30px;
+}
+
+/* icon */
+#icon {
+  display: inline-block;
+  color: #fff;
+  width: 49%;
+}
+
+#icon img {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* main navigation */
+nav {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+
+nav ul li a:hover {
+  background: #444;
+}
+
+/* styling our main content */
+.hero {
+  min-height: 800px;
+  text-align: center;
+  background-image: url("../img/dining.jpg");
+  background-size: cover;
+}
+
+.hero__content {
+  color: #ffffff;
+  padding-top: 25px;
+}
+
+.hero__title {
+  font-size: 100px;
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+
+.hero__subtitle {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.hero__content a {
+  display: inline-block;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+  transition: transform 1s;
+}
+
+.hero__content a:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* basic site section */
+.features {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features__header h2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #777;
+}
+
+/* feature boxes */
+.features__box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__box {
+  text-align: center;
+  flex: 1;
+  margin-left: 5px;
+}
+
+.features__box img {
+  margin-bottom: 12px;
+  width: 80px;
+}
+
+.features__box h5 {
+  font-size: 20px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* styling our footer */
+footer {
+  background: #222;
+  padding: 40px;
+  text-align: center;
+  color: #d8d8d8;
+}
+
+/* Responsive columns */
+@media (max-width: 700px) {
+  /* Let things wrap in flex box */
+  .features__box-wrapper {
+    flex-wrap: wrap;
+  }
+  /* Set flex-basis to 100% */
+  .features__box {
+    flex: 1 100%;
+  }
+}
